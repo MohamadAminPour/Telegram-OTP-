@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --green: #04a777;
+    --black1: #212529;
+    --black2: #44474a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--black1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/***************massage***************/
+
+.massage {
+    background-color: var(--black2);
+    display: block;
+    position: absolute;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    color: white;
+    margin: 1rem;
+    top: 0;
+    left: -20rem;
+    transition: 1s;
+    transition-duration: 1s;
+}
+
+.massage .massage-code {
+    font-weight: 600;
+}
+
+/***************PhoneNumber***************/
+
+.PhoneNumber {
+    background-color: var(--black2);
+    width: 25rem;
+    height: 23.5rem;
+    border-radius: .7rem;
+    transition: 1s;
+    transition-duration: 1s;
+    z-index: 1;
+}
+
+.PhoneNumber {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2.5rem;
+}
+
+.PhoneNumber-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+.PhoneNumber-subtitle {
+    color: rgb(157, 157, 157);
+    padding: 0 .5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.PhoneNumber-countryCode {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: .2rem;
+    padding: 0.5rem;
+    font-size: .9em;
+    margin-top: 3rem;
+}
+
+.PhoneNumber-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+.PhoneNumber-box__CountryCode {
+    font-size: 1rem;
+    padding: 0.45rem;
+    position: absolute;
+    width: 25%;
+    left: 0;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    border: none;
+    outline: none;
+}
+
+.PhoneNumber-box__PhoneNumber {
+    position: absolute;
+    padding: 0.5rem;
+    width: 75%;
+    right: 0;
+    font-size: .9em;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    border: none;
+    outline: none;
+    border-left: 1px solid rgb(162, 162, 162);
+}
+
+.SendCodeBtn {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1.4rem;
+    margin-top: 1rem;
+    border-radius: .3rem;
+    color: white;
+    font-weight: 600;
+    background-color: var(--green);
+    margin-top: 2.5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.SendCodeBtn:hover {
+    opacity: .7;
+}
+
+/****************OTP-box******************/
+
+.OTP-box {
+    background-color: var(--black2);
+    width: 25rem;
+    height: 25rem;
+    border-radius: .7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5rem;
+    transition: 1s;
+    transition-duration: 1s;
+    position: absolute;
+    top: 15rem;
+    opacity: 0;
+    visibility: visible;
+}
+
+.OTP-box__icon {
+    font-size: 4.5rem;
+}
+
+.OTP-box__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.OTP-box__subtitle {
+    color: rgb(157, 157, 157);
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.OTP-box__number {
+    font-weight: 600;
+}
+
+.OTP-box__input {
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: .3rem;
+    font-size: 1rem;
+}
+
+.OTP-box__input.active {
+    animation: shake .5s linear;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(-3px);
+    }
+
+    25% {
+        transform: translateX(6px);
+    }
+
+    50% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(6px);
+    }
+
+    100% {
+        transform: translateX(3px);
+    }
+}
+
+
+.OTP-box_btn {
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    padding: 0.5rem 2rem;
+    border-radius: .3rem;
+    background-color: var(--green);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.OTP-box_btn:hover {
+    opacity: .6;
+}
+
+.OTP-box__not-receive {
+    margin-top: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.OTP-box__not-receive:hover {
+    text-decoration: underline;
+}
+
+/****************loader********************/
+.loader {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    position: relative;
+    color: #FFF;
+    left: -100px;
+    box-sizing: border-box;
+    animation: shadowRolling 2s linear infinite;
+}
+
+@keyframes shadowRolling {
+    0% {
+        box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    12% {
+        box-shadow: 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    25% {
+        box-shadow: 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    36% {
+        box-shadow: 120px 0 white, 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        box-shadow: 130px 0 white, 120px 0 white, 110px 0 white, 100px 0 white;
+    }
+
+    62% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white, 110px 0 white;
+    }
+
+    75% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white;
+    }
+
+    87% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white;
+    }
+
+    100% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+    }
+}

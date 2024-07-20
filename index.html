@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>OTP</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="massage">
+            <p class="massage-text">Your facebook code is : <span class="massage-code">59180</span></p>
+        </div>
+
+        <div class="PhoneNumber">
+            <span class="PhoneNumber-title">Your phone Number</span>
+            <span class="PhoneNumber-subtitle">Please confirm your country code and enter your phone number</span>
+            <select class="PhoneNumber-countryCode">
+                <option value="">Country</option>
+                <option value="+93">+93 Afghnistan</option>
+                <option value="+355">+355 Albania</option>
+                <option value="+376">+376 Algeria</option>
+                <option value="+54">+54 Argentina</option>
+                <option value="+61">+61 Australia</option>
+                <option value="+973">+973 Bahrain</option>
+                <option value="+32">+32 Belgium</option>
+                <option value="+501">+501 Belize</option>
+                <option value="+55">+55 Brazil</option>
+                <option value="+1">+1 Canada</option>
+                <option value="+86">+86 china</option>
+                <option value="+45">+45 Denmark</option>
+                <option value="+20">+20 Egypt</option>
+                <option value="+679">+679 Fiji</option>
+                <option value="+358">+358 Finland</option>
+                <option value="+33">+33 France</option>
+                <option value="+30">+30 Greece</option>
+                <option value="+852">+852 Hong Kong</option>
+                <option value="+91">+91 India</option>
+                <option value="+98">+98 Iran</option>
+                <option value="+964">+964 Iraq</option>
+                <option value="+972">+972 Israel</option>
+                <option value="+39">+39 Italy</option>
+                <option value="+81">+81 Japan</option>
+                <option value="+52">+52 Mexico</option>
+                <option value="+212">+212 Morocco</option>
+                <option value="+64">+64 New Zealand</option>
+                <option value="+92">+92 Pakistan</option>
+                <option value="+507">+507 Panama</option>
+                <option value="+970">+970 Palestine</option>
+                <option value="+51">+51 Peru</option>
+                <option value="+63">+63 Philippine</option>
+                <option value="+48">+48 Poland</option>
+                <option value="+351">+351 Portugal</option>
+                <option value="+974">+974 Qatar</option>
+                <option value="+7">+7 Russian</option>
+                <option value="+381">+381 Serbia</option>
+                <option value="+65">+65 Singapore</option>
+
+            </select>
+            <div class="PhoneNumber-box">
+                <input type="text" class="PhoneNumber-box__CountryCode" placeholder="+98">
+                <input type="text" class="PhoneNumber-box__PhoneNumber" placeholder="Phone Number">
+            </div>
+            <button class="SendCodeBtn">Send Code</button>
+        </div>
+
+        <div class="OTP-box">
+            <i class='bx bx-envelope OTP-box__icon'></i>
+            <div class="OTP-box__title">Check your mobile messages</div>
+            <div class="OTP-box__subtitle">
+                The OTP code has been sent to the number
+                <span class="OTP-box__number">09151234567</span>
+            </div>
+            <input type="text" class="OTP-box__input" placeholder="Your Code...">
+            <button class="OTP-box_btn">Submit</button>
+            <a href="#" class="OTP-box__not-receive">didn't get the code?</a>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
